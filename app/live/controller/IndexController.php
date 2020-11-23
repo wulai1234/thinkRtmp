@@ -4,22 +4,18 @@
  */
 namespace app\live\controller;
 
-use cmf\controller\AdminBaseController;
+use cmf\controller\HomeBaseController;
 
-class LiveController extends AdminBaseController
+class IndexController extends HomeBaseController
 {
 
   
-    public function room()
+    public function index()
     {
         
         return $this->fetch();
     }
 
-    protected function post()
-    {
-        
-        return $this->fetch();
-    }
+    
 
 }
