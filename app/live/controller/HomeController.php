@@ -6,7 +6,7 @@ namespace app\live\controller;
 
 use cmf\controller\HomeBaseController;
 
-class IndexController extends HomeBaseController
+class HomeController extends HomeBaseController
 {
 
   
