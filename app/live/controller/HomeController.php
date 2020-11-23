@@ -13,7 +13,7 @@ class HomeController extends HomeBaseController
   
     public function index()
     {
-        $res = Hook::listen('get_nav');
+        $res = Hook::listen('get_main_nav');
         return $this->fetch();
     }
 
