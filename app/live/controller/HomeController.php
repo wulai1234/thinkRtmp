@@ -5,6 +5,7 @@
 namespace app\live\controller;
 
 use cmf\controller\HomeBaseController;
+use \think\Hook;
 
 class HomeController extends HomeBaseController
 {
@@ -12,7 +13,7 @@ class HomeController extends HomeBaseController
   
     public function index()
     {
-        
+        $res = Hook::listen('get_nav');
         return $this->fetch();
     }
 
