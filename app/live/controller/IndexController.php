@@ -1,24 +1,37 @@
 <?php
-// +----------------------------------------------------------------------
-// | ThinkCMF [ WE CAN DO IT MORE SIMPLE ]
-// +----------------------------------------------------------------------
-// | Copyright (c) 2013-2019 http://www.thinkcmf.com All rights reserved.
-// +----------------------------------------------------------------------
-// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
-// +----------------------------------------------------------------------
-// | Author: 老猫 <thinkcmf@126.com>
-// +----------------------------------------------------------------------
+/**
+ *   直播模块 直播间控制器
+ */
 namespace app\live\controller;
 
 use cmf\controller\AdminBaseController;
 
-class IndexController extends AdminBaseController
+class LiveController extends AdminBaseController
 {
+    public function entrance(){
+        $param = $this->request->param();
+        switch ($param['url_type']) {
+            case 'list':
+                $this->room();
+                break;
+            case 'add':
+                $this->post();
+                break;
+            default:
+                # code...
+                break;
+        }
+    }
   
-    public function index()
+    protected function room()
     {
         
+        return $this->fetch();
+    }
 
+    protected function post()
+    {
+        
         return $this->fetch();
     }
 
