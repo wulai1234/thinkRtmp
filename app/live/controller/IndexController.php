@@ -8,22 +8,9 @@ use cmf\controller\AdminBaseController;
 
 class LiveController extends AdminBaseController
 {
-    public function entrance(){
-        $param = $this->request->param();
-        switch ($param['url_type']) {
-            case 'list':
-                $this->room();
-                break;
-            case 'add':
-                $this->post();
-                break;
-            default:
-                # code...
-                break;
-        }
-    }
+
   
-    protected function room()
+    public function room()
     {
         
         return $this->fetch();
